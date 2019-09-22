@@ -1,1 +1,3 @@
-Modificare pentru branch 1.
+Modificare pentru branch 1. &
+
+Modificare pentru branch 2.
