@@ -1,0 +1,5 @@
+Modificare pentru branch 1. &
+
+Modificare pentru branch 2.
+
+Am modificat si am dat stash intre branch 1 si branch 2.
