@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Rezolvare tema curs 2 - HTML Forms; al patrulea set de cerinte</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Borsan Traian-Cristian">
+        <meta name="description" content="Rezolvare tema HTML Forms; 4">
+        <meta http-equiv="refresh" content="30">
+        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        <style>
+                .button {
+                  background-color: white
+                  border: black;
+                  color: black;
+                  padding: 1px 7px;
+                  text-align: center;
+                  text-decoration: none;
+                  display: inline-block;
+                  font-size: normal;
+                  margin: 4px 2px;
+                }
+                .button1 {border-radius: 16px;}
+        </style>
+    </head>
+    <body>
+    <h1>My feedback form</h1>
+    <ul>
+        <li>
+           <form>Name:
+               <input type="text" name="nume_persoana">
+           </form> 
+        </li>
+        <li>
+            <form>Email:
+                <input type="email" name="email_persoana">
+            </form>
+        </li>
+        <li>
+            <form>Password:
+                <input type="password" name="parola_persoana">
+            </form>
+        </li><br>
+        <li>
+            <form>Please check all the emotions that apply to you:
+                <ul>
+                    <li>Angry
+                        <input type="checkbox" name="optiune1" value="nervos" checked>
+                    </li>
+                    <li>Sad
+                        <input type="checkbox" name="optiune2" value="suparat">
+                    </li>
+                    <li>Happy
+                        <input type="checkbox" name="optiune3" value="fericit">
+                    </li>
+                    <li>Ambivalent
+                        <input type="checkbox" name="optiune4" value="ambivalent">
+                    </li>
+                </ul>
+            </form>
+        </li><br>
+        <li>
+            <form>How satisfied were you with our serice?
+                <ul>
+                    <li>Very satisfied
+                        <input type="radio" name="optiune" value="very_satisfied" checked>
+                    </li>
+                    <li>Satisfied
+                        <input type="radio" name="optiune" value="satisfied">
+                    </li>
+                    <li>Didn't care
+                        <input type="radio" name="optiune" value="didn't_care">
+                    </li>
+                    <li>Dissatisfied
+                        <input type="radio" name="optiune" value="dissatisfied">
+                    </li>
+                    <li>Very dissatisfied
+                        <input type="radio" name="optiune" value="very_dissatisfied">
+                    </li>
+                </ul>
+            </form>
+        </li>
+        <li>Further comments:
+            <textarea name="mesaj" rows="3" cols="20"></textarea>
+        </li>
+        <li>Bio photo:
+            <input type="file" name="fisier_adaugat" value="Choose file" >
+            <!-- Nu am reusit sa rotunjesc butonul de Choose file -->
+        </li>
+        <li>Location visited:
+                    <select>
+                      <option value="1">Romania</option>
+                      <option value="2">Bulgaria</option>
+                      <option value="3">Ungaria</option>
+                      <option value="4">Italia</option>
+                      <option value="5">Franta</option>
+                      <option value="6">Marea Britanie</option>
+                      <option value="7">SUA</option>
+                      <option value="8">Mexic</option>
+                      <option value="9">China</option>
+                      <option value="10">Coreea de Sud</option>
+                      <option value="11">India</option>
+                      <option value="12">Tunisia</option>
+                      <option value="13" selected>Select location</option>
+                    </select>
+        </li>
+        <li>
+        <form action="/url-trimitere-formular">
+            <button class="button button1">submit</button>
+            <!-- Varianta cu butonul nestilizat
+            <input type="submit" value="submit"> -->
+        </form>
+        </li>
+    </ul>
+    </body>
+</html>

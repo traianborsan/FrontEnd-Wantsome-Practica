@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Rezolvare tema curs 2 - HTML Forms; al doilea set de cerinte</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Borsan Traian-Cristian">
+        <meta name="description" content="Rezolvare tema HTML Forms; 2">
+        <meta http-equiv="refresh" content="30">
+        <meta name="viewport" content="windth=device-width,intial scale=1.0">
+    </head>
+    <body>
+        <h1>Travel reservation form</h1>
+        <p><b>*Denotes mandatory</b></p>
+        <form aria-required="true">
+            <label for="persoana">Fullname*:</label><br>
+            <input type="text" name="persoana" id="persoana" placeholder="FirstName LastName"><br>
+        </form>
+        <form aria-required="true">
+            <label for="adresa_e-mail">E-mail address*:</label><br>
+            <input type="text" name="adresa_e-mail" id="adresa_e-mail" placeholder="E-MAIL_ADDRESS"><br>
+        </form>
+        <form aria-required="true">Select Tour Package*:<br>
+            <select name="pachete_turistice">
+            <optgroup label="Europe">
+                <option name="Giorgia" value="Gio">Gio</option>
+                <option name="Espana" value="Esp">Esp</option>
+                <option name="Germany&Austria" value="DeOt">DeOt</option>
+            </optgroup>
+            <optgroup label="South_America">
+                <option name="Brazil" value="Bra">Bra</option>
+                <option name="Chile" value="Chi">Chi</option>
+            </optgroup>
+            <optgroup label="South_Pacific">
+                <option name="GoAustralia" value="Goa" selected>Goa</option>
+                <option name="Fiji" value="Fij">Fij</option>
+            </optgroup>
+        </select>
+    </form>
+    <form aria-required="true">Arrival date*:<br>
+        <input type="datetime" name="datasosirii" placeholder="m/d/y">
+    </form>
+    <form aria-required="true">Number of persons*:<br>
+      <input type="text" name="cantitate" placeholder="UNKNOWN_TYPE">
+    </form>
+    <form aria-required="true">What would you want to avail?*<br>
+        Boarding<input type="checkbox" name="optiunea1" value="Boarding"><br>
+        Fooding<input type="checkbox" name="optiunea2" value="Fooding"><br>
+        Sight seeing<input type="checkbox" name="optiunea3" value="Sight seeing">
+    </form>
+
+<!-- <!-- folosim checkbox right cu elementul div si clase
+<form>What would you want to avail?<br>
+    <div class="checkbox-custom checkbox-default right">
+        <label for="checkboxExample1">Boarding</label>
+        <input type="checkbox" id="checkboxExample1"><br>
+        <label for="checkboxExample1">Fooding</label>
+        <input type="checkbox" id="checkboxExample1"><br>
+        <label for="checkboxExample1">Sight Seeing</label>
+        <input type="checkbox" id="checkboxExample1">
+    </div>
+</form>  -->
+
+<form>Discount Coupon code:<br>
+<input type="text" name="codcupon" placeholder="UNKNOWN_TYPE">
+</form>
+<form aria-required="true">Terms and conditions*:<br>
+    <input type="radio" name="optiune" value="Sunt_de_acord" checked>I agree
+    <input type="radio" name="optiune" value="Nu_sunt_de_acord">I disagree
+</form>
+<form>
+    <input type="submit" value="Complete reservation">
+</form>
+    </body>
+</html>
