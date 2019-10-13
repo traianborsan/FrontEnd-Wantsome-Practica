@@ -1,0 +1,26 @@
+.header{
+    height: 50px;
+    background-color: yellow
+}
+.footer{
+    height: 50px;
+    background-color: red   
+}
+.container{
+    display: flex
+}
+.left-side, .right-side{
+    height:50px
+    width:200px
+}
+.left-side{
+background-color: aqua
+}
+
+.right-side{
+    background-color:orange
+    }
+.main-content{
+    width:100%;
+    background-color: purple
+}
