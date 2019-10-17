@@ -1,0 +1,12 @@
+.giraffe {
+    background: rgb(56, 153, 185) url("https://observator.tv/uploads/image/girafa.jpg") fixed center center no-repeat content-box;
+    background-size: 700px;
+    height: 515px;
+    width: 800px;
+    position: absolute;
+    top: 6%;
+    left: 18%;
+    padding: 20px 20px;
+    border: red 10px dotted;
+}
+

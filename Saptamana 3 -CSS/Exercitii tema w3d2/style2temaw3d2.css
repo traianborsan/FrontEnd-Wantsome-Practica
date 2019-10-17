@@ -1,0 +1,125 @@
+body{
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.clearfix:after { 
+    content: "."; 
+    visibility: hidden; 
+    display: block; 
+    height: 0; 
+    clear: both;
+ }
+
+.container {
+    box-sizing: border-box;
+    display: inline-block;
+    float:none;
+    overflow: hidden;
+    width: 98%;
+    height: 100%;
+    top: 0;
+    left: 20px;
+    right: 15px;
+    border:cyan 3px solid;
+    clear: both;
+}
+
+.navigation_menu {
+    box-sizing: border-box;
+    display: block;
+    float: left;
+    width: 125px;
+    height: 200px;
+    left: 0;
+    top: 0;
+    padding: 2px 2px;
+    border: magenta 3px solid;
+    background-color: white;
+}
+
+.li {
+    box-sizing: border-box;
+}
+
+a:link {
+    text-decoration: none;
+    color: magenta
+}
+
+a:visited {
+    text-decoration: none;
+    color: magenta;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: magenta;
+}
+
+.another_container {
+    box-sizing: border-box;
+    display: inline;
+    float: right;
+    overflow: hidden;
+    margin-left: 130px;
+    height: 100%;
+    width: 90% !important;
+    top: 300px;
+}
+
+.section-1 {
+    box-sizing: border-box;
+    display: block;
+    float: inherit;
+    overflow: hidden;
+    top: 0;
+    height: 15%;
+    width: 100%;
+    padding: 10px 10px;
+    border:orange 3px solid;
+}
+.section-2 {
+    box-sizing: border-box;
+    display: block;
+    float: inherit;
+    overflow: hidden;
+    top: 72px;
+    bottom: 200px;
+    height: 70%;
+    width: 100%;
+    padding: 40px 10px;
+    border:orange 3px solid;
+    background-color: cornsilk;
+    color: blueviolet;
+}
+
+.section-3 {
+    box-sizing: border-box;
+    display: block;
+    float: inherit;
+    overflow: hidden;
+    bottom: 0;
+    height: 16%;
+    width: 100%;
+    padding: 10px 10px;
+    border:orange 3px solid;
+}
+
+.footer {
+    display: flex;
+    float: both;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    width: 99%;
+    height: 40%;
+    bottom: 0;
+    left: 5px;
+    right: 5px;
+    border-top: green 3px solid;
+    border-right: green 3px solid;
+    border-left: green 1px solid;
+    background-color: white;
+    clear: both;
+}
