@@ -1,10 +1,10 @@
 h1{
-    display: none
-}
-
-h2{
-    visibility: hidden
-}
+    visibility: hidden  
+    }
+    
+    h2{
+        display: none
+        }
 
 li{
     display: inline
