@@ -1,0 +1,67 @@
+li:nth-child(even) a{
+    color: green;
+}
+
+li:nth-child(even) {
+    color: green;
+}
+
+li:nth-child(3) {
+    background-color: #80ccff
+}
+
+li:first-child {
+    border-top: solid 1px green
+}
+
+li:last-child{
+    border-bottom: dotted 5px blue
+}
+
+li:nth-of-type(3) a {
+    color: red;
+}
+
+li:nth-of-type(5) a {
+    color: red;
+}
+
+li:nth-of-type(5) a:hover { 
+    color:grey
+}
+
+li:nth-of-type(2) {
+    list-style-type: none;
+}
+
+li:nth-of-type(5) {
+    list-style-type: none;
+}
+
+input:focus {
+    background-color: grey
+}
+
+input[placeholder="first name"] {
+    color:green;
+}
+
+input[placeholder="last name"] {
+    color:blue;
+}
+
+input[type="password"] {
+    color: transparent;
+}
+
+    /* nu am gasit varianta potrivita pentru a face parola invizibila ca se scrie in casuta */
+    /* cerinta de la punctul l este aceeasi cu cea de la punctul a */
+
+div:nth-of-type(4) input:active {
+    color:pink;
+    background-color:yellow
+}
+
+div:nth-of-type(5) input:hover { 
+    color:red
+}

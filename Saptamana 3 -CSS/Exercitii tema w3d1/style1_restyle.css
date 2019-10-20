@@ -1,0 +1,83 @@
+li:nth-child(even) a{
+    color: green;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: large;
+}
+
+li:nth-child(even) {
+    color: orangered;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+li:nth-child(odd) a{
+    color: blue;
+    font-family: 'Inconsolata', monospace;
+    font-size: large;
+}
+
+li:nth-child(odd) {
+    color: orangered;
+    font-family: 'Inconsolata', monospace;
+    background-color: #80ccff
+}
+
+li:first-child {
+    border-top: double 5px grey
+}
+
+li:last-child{
+    border-bottom: double 5px grey
+}
+
+li:nth-of-type(2n+1) a:hover { 
+    color:grey;
+}
+
+li:nth-of-type(2n+1) {
+    list-style-type: square;
+}
+
+li:nth-of-type(2n) a:hover {
+    color: black
+}
+
+li:nth-of-type(2n) {
+    list-style-type: none;
+}
+
+input:focus {
+    background-color: lightblue;
+    font-size: 15px;
+    border-block-start: 10px;
+    border-color: green
+}
+
+input[placeholder="first name"] {
+    color: red;
+}
+
+input[placeholder="last name"] {
+    color: red;
+}
+
+div:nth-of-type(3) input:active {
+    color:pink;
+    background-color:yellow
+}
+
+    /* nu am gasit varianta potrivita pentru a face parola invizibila cand se scrie in casuta */
+    /* cerinta de la punctul l este aceeasi cu cea de la punctul a */
+
+div:nth-of-type(4) input:active {
+    color:pink;
+    background-color:yellow
+}
+
+div:nth-of-type(5) input:hover { 
+    color:red;
+    font-weight: bold;
+    border-top: double 4px crimson;
+    border-left: double 4px blue;
+    border-bottom: double 4px crimson;
+    border-right: double 4px blue;
+}

@@ -1,0 +1,20 @@
+.link_color{
+    color: red;
+}
+
+.div_style{
+    border: 1px solid black;
+}
+
+.link_color_indiv{
+    color: green;
+}
+
+#link_color_id{
+    color:#C55;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+#p{
+    font-family: 'Indie Flower', cursive;
+}
