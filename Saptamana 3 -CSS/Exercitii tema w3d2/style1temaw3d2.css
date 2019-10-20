@@ -63,7 +63,7 @@ a:hover {
     box-sizing: border-box;
     display: block;
     position: absolute;
-    overflow: auto;
+    overflow: inherit;
     top: 0;
     height: 15%;
     width: 100%;
@@ -75,11 +75,12 @@ a:hover {
     box-sizing: border-box;
     display: block;
     position: absolute;
-    overflow: auto;
+    overflow: inherit;
     top: 72px;
     bottom: 200px;
     height: 70%;
     width: 100%;
+    /* margin: auto; --- e pentru centrarea textului in box */
     padding: 40px 10px;
     border:orange 3px solid;
     background-color: cornsilk;
@@ -90,7 +91,7 @@ a:hover {
     box-sizing: border-box;
     display: block;
     position: absolute;
-    overflow: auto;
+    overflow: inherit;
     bottom: 0;
     height: 16%;
     width: 100%;
