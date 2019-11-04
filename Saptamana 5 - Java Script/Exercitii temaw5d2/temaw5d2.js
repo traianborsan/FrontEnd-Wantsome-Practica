@@ -174,7 +174,7 @@ function insert(string3, string4, position1) {
                 var a = result1.substr(string4.length-1,position1)
                 var b = result1.slice(string4.length-1+position1,result1.length-1)
                 result2 = a.concat(string4)
-                return result4.concat(b)
+                return result2.concat(b)
             }
         }
         else {
