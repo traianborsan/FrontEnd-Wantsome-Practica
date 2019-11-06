@@ -548,28 +548,77 @@ console.log(toPoints(95));
 // "weekend"
 // undefined
 
-// pas 1: Stabilesc ca date este de tip String;
-// pas 2: Aloc unei date de tip "mmm dd, yyyy" o zi din saptamana (folosesc un Array);
-// pas 3: Realizez alocarea cuvantului "weekend" pentru zilele de "Saturday" si "Sunday" (folosind switch)
 
-function is_weekend(date) {
-    if (typeof date !== "string") {
+//OBS.: La finalul executiei functiei va trebui sa modificam OBLIGATORIU in functie valoarea lui a_date,
+//altfel ne va da rezultat gresit sau eroare.
+
+function is_weekend() {
+    a_date = new Date('Nov 15, 2014');
+    var a_begin_date = new Date('Jan 01, 1970');
+    if (typeof a_date !== "object") {
         return "Wrong date type!"
     }
     else {
-        var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-        var numb = [0, 1, 2, 3, 4, 5, 6]
-        switch(date){
-            case "Saturday": return "weekend"
-            break;
-            case "Sunday": return "weekend"
-            break;
-            default: return undefined
+        if (a_date >= a_begin_date) {
+            var weekday = new Array(7);
+            weekday[0] = "weekend";
+            weekday[6] = "weekend";
+            if (weekday[0] === weekday[a_date.getDay()] || weekday[6] === weekday[a_date.getDay()]) {
+                return console.log(weekday[a_date.getDay()])
+            }
         }
-        
+        else {
+            return "undefined"
+        }     
     }
 }
 
 console.log(is_weekend('Nov 15, 2014'));
+
+
+function is_weekend() {
+    a_date = new Date('Nov 16, 2014');
+    var a_begin_date = new Date('Jan 01, 1970');
+    if (typeof a_date !== "object") {
+        return "Wrong date type!"
+    }
+    else {
+        if (a_date >= a_begin_date) {
+            var weekday = new Array(7);
+            weekday[0] = "weekend";
+            weekday[6] = "weekend";
+            if (weekday[0] === weekday[a_date.getDay()] || weekday[6] === weekday[a_date.getDay()]) {
+                return console.log(weekday[a_date.getDay()])
+            }
+        }
+        else {
+            return "undefined"
+        }     
+    }
+}
+
 console.log(is_weekend('Nov 16, 2014'));
+
+
+function is_weekend() {
+    a_date = new Date('Nov 17, 2014');
+    var a_begin_date = new Date('Jan 01, 1970');
+    if (typeof a_date !== "object") {
+        return "Wrong date type!"
+    }
+    else {
+        if (a_date >= a_begin_date) {
+            var weekday = new Array(7);
+            weekday[0] = "weekend";
+            weekday[6] = "weekend";
+            if (weekday[0] === weekday[a_date.getDay()] || weekday[6] === weekday[a_date.getDay()]) {
+                return console.log(weekday[a_date.getDay()])
+            }
+        }
+        else {
+            return "undefined"
+        }     
+    }
+}
+
 console.log(is_weekend('Nov 17, 2014'));

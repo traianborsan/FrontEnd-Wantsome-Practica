@@ -2,8 +2,10 @@ Cerinte:
 // 1. Scrieti o functie care verifica daca un input este sau nu de tip string.
 
 function is_string(input) {
-    if (typeof input === "string") {return true;
-    } else {
+    if (typeof input === "string") {
+        return true;
+    }
+    else {
       return false;
     }
   };
@@ -55,9 +57,7 @@ function abbrev_name(str_name) {
     }
     else {
         var myArray = str_name.split(" ");
-        console.log(myArray);
         myArray.splice(1, 1, "S.");
-        console.log(myArray);
         var res = myArray.join(" ");
         return result = res.toString()
     }
@@ -69,20 +69,19 @@ console.log(abbrev_name("Robin Singh"));
 
 // 5. Scrieti o functie care face prima litera a unui string sa fie de tip capital ( litera mare ):
 
-function capitalize(stri1) {
-    var x = typeof(stri1);
-    if (x === "string") {
-    var y = stri1.trim();
-    var z = y[0];
-    var w = y.replace(z,"");
-    var result1 = z.toUpperCase();
-    var result2 = result1.concat(w);
-      return console.log(result2)
-  } else {
-    "Parameter not a string"
+function capitalize(string1) {
+    if (typeof(string1) !== "string") {
+        return "Wrong data type!"
+    }
+    else {
+        var y = string1.trim();
+        var z = y[0];
+        var w = y.replace(z,"");
+        var part_result = z.toUpperCase();
+        var result = part_result.concat(w);
+        return console.log(result)
+    } 
   };
-  };
-  capitalize("mingea este in portbagaj.")
 
 console.log(capitalize('js string exercises'));
 "Js string exercises"
@@ -90,12 +89,12 @@ console.log(capitalize('js string exercises'));
 
 // 6. Scrieti o functie care elimina un numar specificat de caractere pornind de la inceputul string-ului:
 
-function truncate_string(string_element, num_Of_Char) {
-    if (typeof string_element !== "string" && typeof num_Of_char !== "number") {
+function truncate_string(string_Element, num_Of_Char) {
+    if (typeof string_Element !== "string" && typeof num_Of_Char !== "number") {
         return "Wrong data type!"
     }
     else {
-        return string_element.substr(0, num_Of_Char)
+        return string_Element.substr(0, num_Of_Char)
     };
 }
 
@@ -154,32 +153,30 @@ false
 
 // 8. Scrieti o functie care insereaza un string la o anumita pozitie intr-un alt string:
 
-function insert(string3, string4, position1) {
-    console.log(string3)
-    if (typeof string3 !== "string" && string4 !== "string" && typeof position1 !== "number") {
+function insert(string1, string2, position) {
+    var substring1 = string1.substr(0,position);
+    var substring2 = string1.slice(position,);
+    if (typeof string1 !== "string" && string2 !== "string" && typeof position !== "number") {
         return "Wrong data type!"
     }
-    else if (string3 === "" || string4 === "") {
+    else if (string1 === "" || string2 === "") {
         return "We have an/ both empty string(s). Please insert new data."
     }
     else {
-        if (position1 > string3.length-1) {
+        if (position > string1.length-1) {
             return "Not possible. We surpassed our string."
         }
-        else if (position1 <= string3.length-1) {
-            if (result1 = string4.concat(string3)) {
-                return result1
+        else {
+            console.log(string1);
+            console.log(string2.concat(string1));
+            var result1 = substring1.concat(string2).concat(substring2)
+            if (result1 !== "") {
+                return console.log(result1)
             }
             else {
-                var a = result1.substr(string4.length-1,position1)
-                var b = result1.slice(string4.length-1+position1,result1.length-1)
-                result2 = a.concat(string4)
-                return result2.concat(b)
+                return "A different case scenario."
             }
-        }
-        else {
-            return "Whole different scenario."
-        }
+        } 
     }
 }
 
@@ -192,38 +189,19 @@ console.log(insert('We are doing some exercises.','JavaScript ',18));
 // 9. Scrieti o functie care elimina prima aparitie a unui string dintr-un alt string:
 
 function remove_first_occurrence(string1,string2) {
-    if (typeof string1 !== "string" && string2 !== "string") {
+    var noSpace_String1 = string1.trim();
+    var noSpace_String2 = string2.trim()
+    if (typeof noSpace_String1 !== "string" && noSpace_String2 !== "string") {
         return "Wrong data type!"
     }
-    else if (string1 === "" || string2 === "") {
+    else if (noSpace_String1 === "" || noSpace_String2 === "") {
         return "We have an/ both empty string(s). Please insert new data."
     }
     else {
-        var a = string1.trim()
-        var myArray = a.split(" ")
-        var c = myArray.length
-        var position = 0 
-        if (c-1-position < 0) {
-            return "We surpassed our string!"
-        }
-        else if (position < c-1) {
-            var pos_element = myArray[position]
-            if (pos_element !== string2) {
-                console.log(myArray)
-                return position++
-            }
-            else {
-                var result = myArray.splice(position, 1,"")
-                console.log(result)
-                return result.join()
-            }   
-        }
-        else {
-            return "We couldn't find the second array inside the first one."
-        }
+        var result = noSpace_String1.replace(" " + noSpace_String2, "")
+        return result
     }
 }
-
 
 console.log(remove_first_occurrence("The quick brown fox jumps over the lazy dog", 'the'));
 "The quick brown fox jumps over lazy dog"
@@ -242,18 +220,13 @@ function compare_strings(string1,string2) {
         return "We have different string lengths"
     }
     else if (string1.length === string2.length) {
-        var char_1 = string1[0]
-        var char_2 = string2[0]
-        if (char_1.toUpperCase === char_2.toUpperCase &&
-            char_1.toLowerCase === char_2.toLowerCase) {
+        if (string1.toUpperCase() === string2.toUpperCase() && string1.toLowerCase() === string2.toLowerCase()) {
             return true
         }
         else {
             return false
         }
     }
-    char_1++
-    char_2++
 }
 
 console.log(compare_strings('abcd', 'AbcD'));
@@ -262,20 +235,19 @@ true
 
 // 11. Scrieti o functie care face ca primul caracter a unui string sa fie de tip uncapital:
 
-function Uncapitalize(stri1) {
-    var x = typeof(stri1);
-    if (x === "string") {
-    var y = stri1.trim();
-    var z = y[0];
-    var w = y.replace(z,"");
-    var result1 = z.toLowerCase();
-    var result2 = result1.concat(w);
-      return console.log(result2)
-  } else {
-    "Parameter not a string"
+function Uncapitalize(string1) {
+    if (typeof(string1) !== "string") {
+        return "Wrong data type!"
+    }
+    else {
+        var y = string1.trim();
+        var z = y[0];
+        var w = y.replace(z,"");
+        var part_result = z.toLowerCase();
+        var result = part_result.concat(w);
+        return console.log(result)
+    } 
   };
-  };
-  Uncapitalize("Mingea este in portbagaj.")
 
 console.log(Uncapitalize('Js string exercises'));
 "js string exercises"
