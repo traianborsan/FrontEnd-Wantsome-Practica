@@ -28,8 +28,8 @@ function verifyGender(CNP) {//sintaxa asociata functiei named function
                 //utilizam functia switch deoarece var firstNumb poate avea valori de la 1-9, iar dintre acestea
                 //doar 4 sunt valide pentru determinarea sexului persoanei 
 
-                case "0": return alert("First digit not accepted. Your CNP can't begin with 0.")
-                break;
+                // case "0": return alert("First digit not accepted. Your CNP can't begin with 0.")
+                // break;
                 // OBS: Pentru alte exercitii care permit ca prima cifra sa fie "0", cum pot evita ca la transformarea
                 // numarului in string prima cifra sa dispara/ sa nu fie luata in considerare. Ce varianta propuneti?
                 // Eu am incercat sa aplic length de number, care desi este variabila primitiva poate deveni si Object 
@@ -62,13 +62,13 @@ function verifyGender(CNP) {//sintaxa asociata functiei named function
     }
 }
 
-// console.log(verifyGender(" 841223226727")); 
-// console.log(verifyGender(1841223226727));
-// console.log(verifyGender(2841223226727));
-// console.log(verifyGender(5841223226727));
-// console.log(verifyGender(6841223226727));
-// console.log(verifyGender(41223226727));
-// console.log(verifyGender(2841223226727100));
+console.log(verifyGender(" 841223226727")); 
+console.log(verifyGender(1841223226727));
+console.log(verifyGender(2841223226727));
+console.log(verifyGender(5841223226727));
+console.log(verifyGender(6841223226727));
+console.log(verifyGender(41223226727));
+console.log(verifyGender(2841223226727100));
 console.log(verifyGender(0841223226727));
 //se vor verifica toate variantele posibile pentru a observa ce rezultate obtinem
 
@@ -157,7 +157,6 @@ console.log(z);
 var z = x(10);
 console.log(z);
 //se vor verifica toate variantele posibile pentru a observa ce rezultate obtinem
-// OBS.: De verificat cand este vorba de nota gen 8.5 de ce da undefined.
 
 
 // 3. Scrieti o functie care accepta ca argument numele marcii unei masini si returneaza un text de forma:
