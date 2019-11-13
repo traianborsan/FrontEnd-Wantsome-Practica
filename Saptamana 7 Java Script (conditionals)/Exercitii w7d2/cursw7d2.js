@@ -233,28 +233,14 @@ verifyStringInString("Masina", "Ina");
 // Implementati o functie care accepta doua argumente: un array si o functie de adevar. Functia returneaza primul element din array care 
 //trece testul specificat
 
-var myArray = [10, true, undefined, 1, 10, "mama", "copil", 8, 25, 0];
-
-var trueOrFalse = function () {
-    if (typeof myArray[i] === "number" && myArray[i] >= 8) {
-        return true
-    }
+var trueOrFalse = function (numb) {
+        return typeof numb === "number" && numb >= 8
 };
-
 function arrayToBoolean(myArray, trueOrFalse) {
-    var myNewArray = [];
-    var counter = 0;
     for (i = 0; i < myArray.length; i++) {
-        if (trueOrFalse()) {
-            for (j = 0; j < myNewArray.length; j++) {
-                myNewArray[j] = myArray[i];
-                counter++;
-                if (myNewArray !== [] && counter === 1) {
-                    break;
-                }
-            }
-        }
-        return console.log(myNewArray[j]);
+        if (trueOrFalse(myArray[i])) {
+            return myArray[i]
+        } 
     }
 }
 
