@@ -277,7 +277,6 @@ function stream(conditionalFn, actionFn) {
 }
 
 stream(conditionalFn, actionFn); // Nu afiseaza nimic
-//OBS.: De vorbit cum ar trebui sa o gandesc.
 
 
 // Cerinta:
