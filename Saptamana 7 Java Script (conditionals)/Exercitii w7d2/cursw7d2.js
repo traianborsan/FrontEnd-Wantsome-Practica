@@ -55,30 +55,30 @@ myFunction("i am superman");//apelare functie
 // ex: myFunction("xxXyYzZZ") sa printeze "XXxYyZzz"
 
 function myFunction(string1) {
-    if (typeof string1 !== "string") {
-        return "Wrong data type!"
+    if (typeof string1 !== "string") {//verific ca tipul sirului de caractere sa fie string
+        return "Wrong data type!"//mesaj predefinit in cazul in care nu este string
     }
-    else if (string1 === "") {
-        return "We have an empty string. Please insert new data."
+    else if (string1 === "") {//verificam ca nu avem de a face cu un string gol
+        return "We have an empty string. Please insert new data."//mesaj predefinit pentru string gol
     }
     else {
-        var newString1 = "";
-        var trimString1 = string1.trim();
-        for (i = 0; i < trimString1.length; i++) {
-            var char = trimString1.charAt(i);
-            var charCode = char.charCodeAt(0);
-            if (charCode >= 97 && charCode <= 122) {
-                newString1 += char.toUpperCase();
+        var newString1 = "";//declaram ca variabila un nou string si assignam stringul gol
+        var trimString1 = string1.trim();//declar variabila echivalenta cu stringul fara spatii in fata si in spate
+        for (i = 0; i < trimString1.length; i++) {//sintaxa specifica for; parcurgem string-ul fara spatii de la indexul 0 la lungimea sa - 1 si incrementam contorul pos_Array
+            var char = trimString1.charAt(i);//declaram variabila char aferente literei de la indexul i
+            var charCode = char.charCodeAt(0);//declaram variabila charCode aferente codului ASCII al literei de la indexul 0
+            if (charCode >= 97 && charCode <= 122) {//cat timp vorbim de un set de litere mici cuprinse in intervalul 97-122 in tabelul ASCII,
+                newString1 += char.toUpperCase();//le transformam in litere mari si le concatenam newString1
             }
-            else if (charCode >= 65 && charCode <= 90) {
-                newString1 += char.toLowerCase();
+            else if (charCode >= 65 && charCode <= 90) {//altfel cat timp vorbim de un set de litere mici cuprinse in intervalul 65-90 in tabelul ASCII,
+                newString1 += char.toLowerCase();//le transformam in litere mici si le concatenam newString1
             }
-            else newString1 += char;
+            else newString1 += char;//altfel orice alt caracter diferit de cele alfabetice este concatenat newString1
         }
     }
-    return newString1;
+    return newString1;//afisam newString1
 };
-myFunction("xxXyYzZZ");
+myFunction("xxXyYzZZ");//apelam functia
 myFunction("ANA are MeRe.");
 
 
@@ -87,21 +87,21 @@ myFunction("ANA are MeRe.");
 // de ex: myFunction("Wantsome", 2) sa printeze "WantsomeWantsome"
 
 function myFunction(str, numb) {
-    if (typeof str !== "string" || typeof numb !== "number") {
-        return "Wrong data types!"
+    if (typeof str !== "string" || typeof numb !== "number") {//verific ca tipul sirului de caractere sa fie string, iar numarul de tip number
+        return "Wrong data types!"//mesaj predefinit in cazul in care nu se respecta una din conditii
     }
-    else if (str === "") {
-        return "We have an empty string. Please insert new data."
+    else if (str === "") {//verificam ca nu avem de a face cu un string gol
+        return "We have an empty string. Please insert new data."//mesaj predefinit pentru string gol
     }
     else if (numb === 0) {
-        return "It's not possible to set this data."
+        return "It's not possible to set this data."//mesaj predefinit in cazul in care numb = 0
     }
     else {
-        return result = str.repeat(numb)
+        return result = str.repeat(numb)//afisam rezultatul concatenarii repetitive a stringului
     }
 }
 
-myFunction("Micutzu ", 4);
+myFunction("Micutzu ", 4);//apelam functia
 
 
 //Ex5
@@ -110,44 +110,44 @@ myFunction("Micutzu ", 4);
 
 // VARIANTA 1(cu functia If):
 function palindrome(string1) {
-    if (typeof string1 !== "string") {
-        return "Wrong data type!"
+    if (typeof string1 !== "string") {//verific ca tipul sirului de caractere sa fie string
+        return "Wrong data type!"//mesaj predefinit in cazul in care nu este string
     }
-    else if (string1 === "") {
-        return "We have an empty string. Please insert new data."
+    else if (string1 === "") {//verificam ca nu avem de a face cu un string gol
+        return "We have an empty string. Please insert new data."//mesaj predefinit pentru string gol
     }
     else {
-        var keepStrNum = /[^A-Za-z0-9]/g;
-        var lowerStrNumStrict = string1.toLowerCase().replace(keepStrNum, "");
-        var reverseStrNumStrict = lowerStrNumStrict.split("").reverse().join("");
-        return lowerStrNumStrict === reverseStrNumStrict;
+        var keepStrNum = /[^A-Za-z0-9]/g;//declaram variabila keepStrNum care cauta la nivel global toate caracterele non alfanumerice si le stocheaza
+        var lowerStrNumStrict = string1.toLowerCase().replace(keepStrNum, "");//in string-ul nostru vom face toate caracterele litere mici si vom inlocui cu ajutorul replace toate caracterele non alfanumerice cu "" 
+        var reverseStrNumStrict = lowerStrNumStrict.split("").reverse().join("");//declaram variabila reverseStrNumStrict care se obtine prin transformarea lowerStrNumStrict in array si cu reverse crearea imaginii sale in oglinda si e apoi transformat iar in string
+        return lowerStrNumStrict === reverseStrNumStrict;//se verifica daca lowerStrNumStrict este echivalent ca valoare si tip cu imginea sa in oglinda (adica reverseStrNumStrict)
     }
 }
-palindrome("Level");
+palindrome("Level");//apelam functia
 palindrome("A.D. asa da");
 
 
 // VARIANTA 2(cu functia For):
 function palindrome1(string2) {
-    if (typeof string2 !== "string") {
-        return "Wrong data type!"
+    if (typeof string2 !== "string") {//verific ca tipul sirului de caractere sa fie string
+        return "Wrong data type!"//mesaj predefinit in cazul in care nu este string
     }
-    else if (string2 === "") {
-        return "We have an empty string. Please insert new data."
+    else if (string2 === "") {//verificam ca nu avem de a face cu un string gol
+        return "We have an empty string. Please insert new data."//mesaj predefinit pentru string gol
     }
     else {
-        var keepStrNum = /[^A-Za-z0-9]/g;
-        var lowerStrNumStrict = string2.toLowerCase().replace(keepStrNum, "");
-        var len = string2.length;
-        for (var i = 0; i < len / 2; i++) {
-            if (lowerStrNumStrict[i] !== lowerStrNumStrict[len - 1 - i]) {
-                return false;
+        var keepStrNum = /[^A-Za-z0-9]/g;//declaram variabila keepStrNum care cauta la nivel global toate caracterele non alfanumerice si le stocheaza
+        var lowerStrNumStrict = string2.toLowerCase().replace(keepStrNum, "");//in string-ul nostru vom face toate caracterele litere mici si vom inlocui cu ajutorul replace toate caracterele non alfanumerice cu ""
+        var len = string2.length;//declaram variabila len care repezinta lungimea string-ului
+        for (var i = 0; i < len / 2; i++) {//sintaxa specifica for; parcurgem string-ul de la indexul 0 la jumatatea lungimii sale-1 si incrementam contorul i (metoda care simplifica executia functiei in cazul string-urilor foarte lungi)
+            if (lowerStrNumStrict[i] !== lowerStrNumStrict[len - 1 - i]) {//daca vom compara litere care sunt la aceeasi distanta fata de capatul cel mai apropiat si vor fi diferite,
+                return false;//se afiseaza false => stringul nu e palindrom
             }
         }
-        return true;
+        return true;//altfel stringul este palindrom
     }
 }
-palindrome1("Level");
+palindrome1("Level");//apelam functia
 palindrome1("A.D. asa da");
 palindrome1("node");
 
@@ -157,35 +157,35 @@ palindrome1("node");
 //contine ca si elemente cele mai mari numere din fiecare array
 
 function biggestValues(myArray) {
-    var bigestValuesArray = [0, 0, 0, 0, 0, 0];
-    for (var i = 0; i < myArray.length; i++) {
-        for (var j = 0; j < myArray[i].length; j++) {
-            if (myArray[i][j] > bigestValuesArray[i]) {
-                bigestValuesArray[i] = myArray[i][j];
+    var bigestValuesArray = [0, 0, 0, 0, 0, 0];//declaram bigestValuesArray cu 6 valori egale cu 0
+    for (var i = 0; i < myArray.length; i++) {//sintaxa specifica for; parcurgem array-ul dat ca argument in functie de la indexul 0 la lungimea sa-1 si incrementam contorul i
+        for (var j = 0; j < myArray[i].length; j++) {//sintaxa specifica for; parcurgem array-urile ce figureaza in interiorul celui principal de la indexul 0 la lungimea sa-1 si incrementam contorul j
+            if (myArray[i][j] > bigestValuesArray[i]) {//daca valoarea de la index-ul j din array-ul secundar parcurs aflat la indexul i in array-ul principal este > valoarea de la index-ul i din bigestValuesArray,
+                bigestValuesArray[i] = myArray[i][j];//indexului i din bigestValuesArray i se assingenaza valoarea gasita si se continua bucla pana se finalizeaza toate valorile array-urilor incluse in array-ul principal
             }
         }
     }
-    return bigestValuesArray;
+    return bigestValuesArray; //afisam bigestValuesArray cu valorile cele mai mari
 }
-biggestValues([[800, 31, 4, ""], [5, 8, 11, 14, 50, 101], [2, 4, 6, 8, true], [1, true, "us", 8], [23, 1], [5000, 2500, 1000, 0]]);
+biggestValues([[800, 31, 4, ""], [5, 8, 11, 14, 50, 101], [2, 4, 6, 8, true], [1, true, "us", 8], [23, 1], [5000, 2500, 1000, 0]]);//apelam functia
 
 
 //Ex7
 // Implementati o functie care face reverse la un string
 
 function reverse(string1) {
-    if (typeof string1 !== "string") {
-        return "Wrong data type!"
+    if (typeof string1 !== "string") {//verific ca tipul sirului de caractere sa fie string
+        return "Wrong data type!"//mesaj predefinit in cazul in care nu este string
     }
-    else if (string1 === "") {
-        return "We have an empty string. Please insert new data."
+    else if (string1 === "") {//verificam ca nu avem de a face cu un string gol
+        return "We have an empty string. Please insert new data."//mesaj predefinit pentru string gol
     }
     else {
-        newString = string1.trim();
-        return newString.split("").reverse().join("");
+        newString = string1.trim();//declar variabila echivalenta cu stringul fara spatii in fata si in spate
+        return newString.split("").reverse().join("");//afisam string-ul care este transformat in array de litere, se creaza imaginea in oglinda si se transforma inapoi in string
     }
 }
-reverse("Am fost la masa!");
+reverse("Am fost la masa!");//apelam functia
 reverese("lalea");
 
 
@@ -193,35 +193,35 @@ reverese("lalea");
 // Implementati o functie care calculeaza factorialul unui numar
 
 function factorialNumb(number1) {
-    if (typeof number1 !== "number") {
-        return "Wrong data type!"
+    if (typeof number1 !== "number") {//verific ca tipul numarului sa fie number
+        return "Wrong data type!"//mesaj predefinit in cazul in care nu este number
     }
     else {
-        factorialResult = 1;
-        for (i = 1; i <= number1; i++) {
-            factorialResult *= i;
+        var factorialResult = 1;//declar variabila factorialResult si ii assignez valoarea 1
+        for (i = 1; i <= number1; i++) {//sintaxa specifica for; parcurgem contorul i de la valoarea 1 la valoarea number1 si incrementam contorul j
+            factorialResult *= i;//vom inmulti la fiecare iteratie valoarea salvata anterior pentru factorialResult cu valoarea contorului pana ajungem la number1
         }
     }
-    return factorialResult;
+    return factorialResult;//afisam rezultatul final
 }
-factorialNumb(5);
+factorialNumb(5);//apelam functia
 
 
 //Ex9
 // Implementati o functie care accepta ca argumente doua string-uri si verifica daca primul se termina cu cel din urma
 
 function verifyStringInString(string1, string2) {
-    if (typeof string1 !== "string" || typeof string2 !== "string") {
-        return "Wrong data type!"
+    if (typeof string1 !== "string" || typeof string2 !== "string") {//verific ca tipul celor 2 siruri de caractere sa fie string
+        return "Wrong data type!"//mesaj predefinit in cazul in care nu este string
     }
-    else if (string1 === "" || string2 === "") {
-        return "We have an/both empty string(s). Please insert new data."
+    else if (string1 === "" || string2 === "") {//verificam ca nu avem de a face cu un string gol
+        return "We have an/both empty string(s). Please insert new data."//mesaj predefinit pentru string gol
     }
     else {
-        if (string1.substr(-string2.length) === string2) {
-            return true;
+        if (string1.substr(-string2.length) === string2) {//daca aplicam functia substr de la finalul string1 pe lungimea string2 si aceasta este egala cu string2 atunci inseamna ca se valideaza finalul string1 
+            return true;//valoare returnata daca cerinta de mai sus este satisfacuta
         } else {
-            return false;
+            return false;//valoare returnata daca cerinta de mai sus este satisfacuta
         }
     }
 }
