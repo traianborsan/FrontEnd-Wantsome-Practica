@@ -2,6 +2,7 @@
 //Vreau sa am o functie care sa-mi calculeze suma dintre 2 numere daca ele sunt diferite iar daca sunt egale sa-mi imulteasca suma lor cu 5
 //ex myFunction(10, 5) - output 15 // myFunction(10,10) - output 100
 
+//VARIANTA ES 5:
 function myFunction(a, b) {
     if (a !== b) {
         return a + b;
@@ -10,8 +11,16 @@ function myFunction(a, b) {
         return (a + b) * 5
     }
 }
-console.log(myFunction(10, 5));
-console.log(myFunction(10, 10));
+myFunction(10, 5);
+myFunction(10, 10);
+
+//VARIANTA ES 6:
+function myFunction(a, b) {
+    let result = (a !== b) ? a + b : (a + b) * 5;
+    return result
+}
+myFunction(10, 5);
+myFunction(10, 10);
 
 
 //Ex2
@@ -90,6 +99,7 @@ removeDuplicates(122334)// - 1234
 // Gasiti cel mai lung string intr-o fraza
 //findLongestString('Wantsome is Awsomeeee today') - output 'Awsomeeee'
 
+//VARIANTA ES5:
 function findLongestString(string1) {
     let str = string1.split(" ");
     let longestString1 = 0;
@@ -104,6 +114,12 @@ function findLongestString(string1) {
 }
 findLongestString('Wantsome is Awsomeeee today');
 
+//VARIANTA ES6 (propusa de Ovidiu Grigoras):
+const longestWordFromTown = words => {
+    let arr = words.split(' ').sort((a, b) => { return b.length - a.length });
+    return arr[0];
+}
+longestWordFromTown('Wantsome is Awsomeeee today');
 
 //Ex6
 //Scrieti o functie care sa aiba output-ul asta
@@ -129,11 +145,17 @@ const negativeNumbers = [];
 function extractNegativeNumbers(numbers) {
     // append any negative numbers found in the numbers array 
     // into the negativeNumbers array constant variable above
+    for (i = 0; i < numbers.length; i++) {
+        if (numbers[i] < 0) {
+            negativeNumbers.push(numbers[i])
+        };
+    }
+    return negativeNumbers;
 }
 extractNegativeNumbers([1, 2, -5, 4, -6])
 //OBS.: Cerinta de a adauga valorile negative din functia extractNegativeNumbers (ce are ca argument un array)
 //in const negativeNumbers nu este posibila deoarece la declararea constantei s-a facut si initializarea cu un
-//array gol echivalent cu "undefined"; ATENTIE: o assignare ulterioara pentru const este imposibila.
+//array gol.???
 
 
 //ex8
@@ -225,7 +247,7 @@ function displayDateFormat() {
     }
     let amOrPm = "";
     if (date1Hour >= 12) {
-        amOrPm = " PM ";   
+        amOrPm = " PM ";
     }
     else {
         amOrPm = " AM ";

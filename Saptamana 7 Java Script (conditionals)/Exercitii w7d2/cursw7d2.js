@@ -108,7 +108,7 @@ myFunction("Micutzu ", 4);//apelam functia
 // A palindrome is a word or a phrase that is the same whether you read it backward or forwards, for example, the word 'level'.
 // Scrieti o functie care verifica daca un string este palindrom; Implementati mai multe variante
 
-// VARIANTA 1(cu functia If):
+// VARIANTA 1 - ES5 (cu functia If):
 function palindrome(string1) {
     if (typeof string1 !== "string") {//verific ca tipul sirului de caractere sa fie string
         return "Wrong data type!"//mesaj predefinit in cazul in care nu este string
@@ -127,7 +127,7 @@ palindrome("Level");//apelam functia
 palindrome("A.D. asa da");
 
 
-// VARIANTA 2(cu functia For):
+// VARIANTA 2 - ES5(cu functia For):
 function palindrome1(string2) {
     if (typeof string2 !== "string") {//verific ca tipul sirului de caractere sa fie string
         return "Wrong data type!"//mesaj predefinit in cazul in care nu este string
@@ -150,6 +150,17 @@ function palindrome1(string2) {
 palindrome1("Level");//apelam functia
 palindrome1("A.D. asa da");
 palindrome1("node");
+
+//VARIANTA ES6: (mai trebuie sa o verific, nu functioneaza corect)
+function isPalindromeVTwo(theStr) {
+    if (theStr.split('').reverse().join('') === theStr) {
+        return `Congrats! The word ${theStr} is a palindrome`;
+    }
+    return `The word ${theStr} is not a palindrome: (`;
+}
+isPalindromeVTwo("Level");//apelam functia
+isPalindromeVTwo("A.D. asa da");
+isPalindromeVTwo("node");
 
 
 //Ex6
@@ -234,13 +245,13 @@ verifyStringInString("Masina", "Ina");
 //trece testul specificat
 
 var trueOrFalse = function (numb) {
-        return typeof numb === "number" && numb >= 8
+    return typeof numb === "number" && numb >= 8
 };
 function arrayToBoolean(myArray, trueOrFalse) {
     for (i = 0; i < myArray.length; i++) {
         if (trueOrFalse(myArray[i])) {
             return myArray[i]
-        } 
+        }
     }
 }
 
@@ -253,6 +264,7 @@ arrayToBoolean([10, true, undefined, 1, 10, "mama", "copil", 8, 25, 0], trueOrFa
 // Implementati o functie care accepta ca argumente doua string-uri si verifica daca primul string contine toate literele celui de-al doilea 
 //string
 
+//VARIANTA ES5:
 function verifyLettersOfStrings(string1, string2) {
     if (typeof string1 !== "string" || typeof string2 !== "string") {
         return "Wrong data type!"
@@ -281,6 +293,18 @@ function verifyLettersOfStrings(string1, string2) {
     }
 }
 verifyLettersOfStrings("Ana are de mers catre scoala acum.", "ziua este senina.");
+
+//VARIANTA ES6:
+function hasSameLetters(str1, str2) {
+    var str2Array = str2.split('');
+    for (var i = 0; i < str2Array.length; i++) {
+        if (str1.search(str2Array[i]) === -1) {
+            return `Not all letters of ${str2} can be found in ${str1}`
+        }
+    }
+    return `All letters of ${str2} can be found in ${str1}`
+}
+hasSameLetters("Ana are de mers catre scoala acum.", "ziua este senina.")
 
 
 // Ex 12
