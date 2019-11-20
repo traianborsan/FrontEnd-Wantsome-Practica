@@ -173,7 +173,6 @@ function verifyAddOperator(string1) {
         if (string1[i] !== "+") {
             return false;
         }
-
         if (i >= len - 1) {
             return true;
         }
