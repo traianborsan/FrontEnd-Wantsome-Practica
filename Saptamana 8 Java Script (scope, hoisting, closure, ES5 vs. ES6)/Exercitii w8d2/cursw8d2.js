@@ -168,15 +168,14 @@ Exemply: input: "+ab+c+d+"  ->   output: false
 
 //varianta ES5
 function verifyAddOperator(string1) {
-    var myArray = string1.split("");
-    var len = myArray.length;
-    for (var i = 0; i < len; i++) {
-        var char = myArray[i];
-        if (char.charCodeAt >= 65 && char.charCodeAt <= 90 && char.charCodeAt >= 97 && char.charCodeAt <= 122 && myArray[i - 1] === "+" && myArray[i + 1] === "+") {
-            return true
+    var len = string1.length;
+    for (var i = 0; i < len; i += 2) {
+        if (string1[i] !== "+") {
+            return false;
         }
-        else {
-            return false
+
+        if (i >= len - 1) {
+            return true;
         }
     }
 }
@@ -184,3 +183,16 @@ verifyAddOperator("+a+b+c+");
 verifyAddOperator("+ab+c+d+");
 
 //varianta ES6
+const stringSortLetters = string1 => {
+    let len = string1.length;
+    for (let i = 0; i < len; i += 2) {
+        if (string1[i] !== "+") {
+            return false;
+        }
+        if (i >= len - 1) {
+            return true;
+        }
+    }
+}
+verifyAddOperator("+a+b+c+");
+verifyAddOperator("+ab+c+d+");
