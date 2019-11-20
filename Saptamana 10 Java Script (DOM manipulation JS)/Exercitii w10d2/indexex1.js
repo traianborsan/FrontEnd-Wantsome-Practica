@@ -2,16 +2,19 @@
 
 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
 
-function getAjaxInforTextDocument() {
-    let xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (this.readyState === 4 && this.status === 200) {
-            document.getElementById("demo").innerHTML = this.responseText
-        }
-    }
-    xhttp.open("GET", "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json", true);
-    xhttp.send();
-}
+const req = () => {
+    const xmlReq = new XMLHttpRequest();
+    xmlReq.open("GET", "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json");
+    xmlReq.onload = () => {
+        const  serverResponse = JSON.parse(xmlReq.response);
+        console.log(serverResponse.squadName);
+        //JSON.stringify(javaScriptObj);
+        const body = document.getElementsByTagName("body")[0];
+        body.innerHTML = serverResponse.squadName
+    };
+    xmlReq.send();
+};
+req();
 
 // numele echipei va fi intr-un h1, locul si cand a fost formata in p-uri.
 
