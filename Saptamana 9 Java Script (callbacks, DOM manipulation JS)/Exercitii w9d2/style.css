@@ -1,0 +1,19 @@
+.read {
+    color: green;
+    border: 5px solid blue;
+};
+
+.unread {
+    color: red;
+    border: 5px solid yellow;
+};
+
+.listitems {
+    color: blue;
+    border: 5px solid yellow;
+}
+/* 
+li {
+    color: blue;
+    border: 5px solid yellow; 
+} */

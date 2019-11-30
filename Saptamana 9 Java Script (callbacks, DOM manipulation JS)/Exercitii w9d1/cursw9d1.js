@@ -350,8 +350,6 @@ const fetchDataFor = userId => {
   simulateServerCall('https://server.com/employee', { userId: userId });
 };
 fetchDataFor();
-// console.log(fetchDataFor());
-// simulateServerCall('https://server.com/employee', fetchDataFor, isDeveloper);
 
 /*Adjust the upper functions so that a callback that filters the employees if they have a developer role
 is executed within the setTimeout that simulates a request to the server; The callback should be implemented by you
