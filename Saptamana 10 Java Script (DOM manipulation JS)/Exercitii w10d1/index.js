@@ -7,7 +7,7 @@
 */
 
 function buttonEventHandler() {
-    
+    alert("Ai apasat pe buton.");
 }  
 const button1 = document.getElementById("button")
 button.addEventListener("click", buttonEventHandler);
