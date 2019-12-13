@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <script type="text/javascript">
+  function validate() {
+  if(myform.fname.value.length==0)
+  {
+   document.getElementById("error").innerHTML="this is invalid name ";
+   document.myform.fname.value="";
+   document.myform.fname.focus();
+  }
+  }
+  </script>
+  </head>
+  <body>
+  <form name="myform">
+  First_Name
+  <input type="text" id="fname" name="fname" onblur="validate()"> </input>
+<span style="color:red;" id="error" > </span>
+  <br> <br>
+  Last_Name
+  <input type="text" id="lname" name="lname" onblur="validate()"> </input>
+
+  <br>
+  <input type=button value=check> 
+
+  </form>
+  </body>
+</html>

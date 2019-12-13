@@ -4,6 +4,6 @@
 }
 
 .unread {
-    color: red;
+    columns: red;
     border: 5px solid yellow;
 }
